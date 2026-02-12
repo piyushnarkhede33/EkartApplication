@@ -49,7 +49,7 @@ public class PaymentServiceImpl implements PaymentService{
 		newCard.setCustomerEmailId(cardDTO.getCustomerEmailId());
 		
 		cardRepository.save(newCard);
-		return newCard.getCardID();
+		return newCard.getCardId();
 	}
 
 	@Override
@@ -90,7 +90,7 @@ public class PaymentServiceImpl implements PaymentService{
 		Optional<Card> optionalCards = cardRepository.findById(cardId);
 		Card card = optionalCards.orElseThrow(() -> new EKartPaymentException("PaymentService.CARD_NOT_FOUND"));
 		CardDTO cardDTO = new CardDTO();
-		cardDTO.setCardId(card.getCardID());
+		cardDTO.setCardId(card.getCardId());
 		cardDTO.setNameOnCard(card.getNameOnCard());
 		cardDTO.setCardNumber(card.getCardNumber());
 		cardDTO.setCardType(card.getCardType());
@@ -114,10 +114,10 @@ public class PaymentServiceImpl implements PaymentService{
 		{
 			throw new EKartPaymentException("PaymentService.CARD_NOT_FOUND");
 		}
-		List<CardDTO> cardDTOs = new ArrayList<CardDTO>();
+		List<CardDTO> cardDTOs = new ArrayList<>();
 		for(Card card : cards)
 		{   CardDTO cardDTO = new CardDTO();
-			cardDTO.setCardId(card.getCardID());
+			cardDTO.setCardId(card.getCardId());
 			cardDTO.setNameOnCard(card.getNameOnCard());
 			cardDTO.setCardNumber(card.getCardNumber());
 			cardDTO.setCardType(card.getCardType());

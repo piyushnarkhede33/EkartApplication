@@ -11,7 +11,7 @@ public class Card {
 	@Id
 	@Column(name="CARD_ID")
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Integer cardID;
+	private Integer cardId;
 	
 	@Column(name="CARD_TYPE")
 	private String cardType;

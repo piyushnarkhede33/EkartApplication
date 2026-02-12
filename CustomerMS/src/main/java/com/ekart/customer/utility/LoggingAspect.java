@@ -13,7 +13,7 @@ public class LoggingAspect {
 
 	private static Log logger = LogFactory.getLog(LoggingAspect.class);
 	
-	@AfterThrowing(pointcut = "execution(* com.ekart.service.*Impl.*(..))", throwing = "exception")	
+	@AfterThrowing(pointcut = "execution(* com.ekart.customer.service.*Impl.*(..))", throwing = "exception")
 	public void logExceptionFromService(Exception exception) {
 		 logger.error(exception.getMessage(), exception);
 	}
