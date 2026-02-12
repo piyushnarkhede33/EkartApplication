@@ -1,0 +1,32 @@
+# =========================
+# Maven / Gradle
+# =========================
+target/
+build/
+!.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# IDEs
+# =========================
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+## Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+## VS Code
+.vscode/

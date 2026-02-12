@@ -1,0 +1,17 @@
+package com.ekart.customer.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="EK_ORDERED_PRODUCT")
+public class OrderedProduct {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer orderedProductId;
+	private Integer productId;
+	private Integer quantity;
+
+}
